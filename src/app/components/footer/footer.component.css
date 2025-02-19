@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Jost');
+
+.footer{
+    background-color: #5CB990;
+}
+.footerContainer{
+    height: 30%;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoimg{
+    height: 60px;
+}
+.place{
+    text-align: center;
+}
+.socials{
+    text-align: center;
+}
+.socialimg{
+    height: 35px;
+    margin-right: 20px;
+    margin-top: 10px; 
+}
+.socialimg:hover {
+    cursor: pointer;
+}
+.footerlist{
+    margin: 10px 0;
+}
+p{
+    font-family: "Jost", Sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 40px;
+    line-height: 60px;
+    color: #19162C;
+}
+
+@media (max-width: 700px) {
+    .logo img{
+        height: 45px;
+    }
+    .socialimg{
+        
+    }
+    .place p{
+        font-size: 20px;
+        line-height: 0;
+    }
+}

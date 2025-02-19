@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Jost');
+
+html, body { 
+     height: 100%; 
+     scroll-behavior: smooth;
+
+}
+body { margin: 0; 
+     }
+     .standard-swipper-pagination {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 22px !important;
+        
+          .swiper-pagination-bullet {
+            width: 12px !important;
+            height: 12px !important;
+            margin: 0 5px !important;
+            background-color: #677B8C;
+          }
+        
+          .swiper-pagination-bullet-active {
+            background-color: #677B8C;
+          }
+      }
+.toastr-img {
+  width: 20px;
+  height: 20px;
+}
+.rotated{
+  transform: rotate(180deg);
+}
+.angular-editor-textarea {
+  background-color: #FFF !important; /* Color de fondo */
+  color: #000; /* Color del texto */
+}

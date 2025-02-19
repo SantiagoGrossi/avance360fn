@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Jost');
+
+.navbar-collapse .collapse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+ul{
+    margin-top: revert;
+}
+.navText{
+    cursor: pointer;
+    color: #FFF;
+    font-family: "Jost", Sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    
+}
+.srlogo{
+    height: 40px;
+}
+
+.navTextGreen{
+    color: #5CB990;
+}
+.navTextDanger{
+    color: #a8323e;
+}
+@media (max-width: 900px) {
+    .navText{
+        color: #251f68;
+        font-size: 20px;
+    }
+    .navTextGreen{
+        color: #5CB990;
+    }
+}
+@media (min-width: 1365px) {
+    .navText{
+        font-size: 13px;
+    }
+}
+@media (min-width: 1919px) {
+    .navText{
+        font-size: 14px;
+    }
+}
+
+.srlogomobile{
+    display: none;
+    margin: 0 auto;
+}
+.srlogodesktop{
+    cursor: pointer;
+}
+@media (max-width: 700px) {
+    .srlogodesktop{
+        display: none;
+    }
+    .srlogomobile{
+        display: block;
+    }
+}
+.active {
+    border-bottom: 1px solid;
+}

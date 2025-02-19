@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Jost');
+
+.content{
+    color: #FFF;
+    padding: 80px 0 0 0;
+    @media (max-width: 768px) {
+        padding: 80px 0 !important;
+    }
+}
