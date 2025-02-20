@@ -19,6 +19,7 @@ import { InterceptorService } from "./services/interceptor/interceptor.service";
 import { MatTableModule } from "@angular/material/table";
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { HomeComponent } from './home/home.component';
+import { AccesoComponent } from './acceso/acceso.component';
 import { GetAllComponent } from './pages/cancha/get-all/get-all.component';
 
 
@@ -48,7 +49,7 @@ import { GetAllComponent } from './pages/cancha/get-all/get-all.component';
     HammerModule,
 
   ],
-  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, HomeComponent, GetAllComponent],
+  declarations: [AppComponent, AccesoComponent, AdminLayoutComponent, AuthLayoutComponent, HomeComponent, GetAllComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
