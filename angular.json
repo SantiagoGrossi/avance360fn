@@ -195,7 +195,6 @@
       }
     }
   },
-  "defaultProject": "black-dashboard-angular",
   "cli": {
     "analytics": false
   }
