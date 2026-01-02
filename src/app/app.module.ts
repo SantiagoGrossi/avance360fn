@@ -19,6 +19,7 @@ import { InterceptorService } from "./services/interceptor/interceptor.service";
 import { MatTableModule } from "@angular/material/table";
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { HomeComponent } from './home/home.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import { HomeComponent } from './home/home.component';
     HammerModule,
 
   ],
-  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, HomeComponent],
+  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, HomeComponent, TestComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
