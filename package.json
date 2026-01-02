@@ -49,7 +49,7 @@
     "@kolkov/angular-editor": "^3.0.0-beta.0",
     "@ng-bootstrap/ng-bootstrap": "10.0.0",
     "@types/file-saver": "^2.0.5",
-    "angular-datatables": "^6.0.0",
+    "angular-datatables": "^14.0.0",
     "chart.js": "2.9.4",
     "core-js": "3.15.2",
     "date-fns": "^2.30.0",
