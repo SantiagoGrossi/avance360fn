@@ -117,14 +117,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "black-dashboard-angular:build"
+            "buildTarget": "black-dashboard-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "black-dashboard-angular:build:production"
+              "buildTarget": "black-dashboard-angular:build:production"
             },
             "dev": {
-              "browserTarget": "black-dashboard-angular:build:dev"
+              "buildTarget": "black-dashboard-angular:build:dev"
             }
           },
           "defaultConfiguration": "dev"
@@ -132,7 +132,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "black-dashboard-angular:build"
+            "buildTarget": "black-dashboard-angular:build"
           }
         },
         "test": {
