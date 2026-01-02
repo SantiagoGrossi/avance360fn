@@ -41,16 +41,47 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
   // function that adds color white/transparent to the navbar on resize (this is for the collapse)
   ngOnInit() {
-    
+    this.user = JSON.parse(this.authService.getUserDetails());
+    this.isUserLogin();
+    this.currentRoute = this.router.url;
+    window.addEventListener("resize", this.updateColor);
+    this.listTitles = ROUTES.filter(listTitle => listTitle);
+    const navbar: HTMLElement = this.element.nativeElement;
+    this.toggleButton = navbar.getElementsByClassName("navbar-toggler")[0];
+    this.router.events.subscribe(event => {
+      this.sidebarClose();
+      var $layer: any = document.getElementsByClassName("close-layer")[0];
+      if ($layer) {
+        $layer.remove();
+        this.mobile_menu_visible = 0;
+      }
+    });
   }
   logout(){
     this.authService.clearStorage();
     window.location.reload();
   }
   collapse() {
- 
+    this.isCollapsed = !this.isCollapsed;
+    const navbar = document.getElementsByTagName("nav")[0];
+    if (!this.isCollapsed) {
+      navbar.classList.remove("navbar-transparent");
+      navbar.classList.add("bg-white");
+    } else {
+      navbar.classList.add("navbar-transparent");
+      navbar.classList.remove("bg-white");
+    }
   }
-
+  updateColor = () => {
+   var navbar = document.getElementsByClassName('navbar')[0];
+     if (window.innerWidth < 993 && !this.isCollapsed) {
+       navbar.classList.add('bg-white');
+       navbar.classList.remove('navbar-transparent');
+     } else {
+       navbar.classList.remove('bg-white');
+       navbar.classList.add('navbar-transparent');
+     }
+   };
   sidebarOpen() {
     const toggleButton = this.toggleButton;
     const mainPanel = <HTMLElement>(
@@ -175,6 +206,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     }
   }
   ngOnDestroy(){
+     window.removeEventListener("resize", this.updateColor);
   }
   goToHome(){
     this.router.navigate(['']); 
